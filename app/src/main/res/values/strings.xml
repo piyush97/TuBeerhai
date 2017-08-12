@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">Tu Beer hai! (Beer Adviser)</string>
+    <string name="brands">brands</string>
+    <string name="Find_Beer">find_beer</string>
+    <string-array name="beer_colors">
+        <item>light</item>
+        <item>Amber</item>
+        <item>Brown</item>
+        <item>dark</item>
+
+    </string-array>
 </resources>
