@@ -7,7 +7,10 @@ import android.view.View;
 import android.widget.Spinner;
 import android.widget.TextView;
 
+import java.util.List;
+
 public class MainActivity extends Activity {
+    private BeerExpert expert=new BeerExpert();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,9 +27,14 @@ public class MainActivity extends Activity {
         Spinner color = (Spinner) findViewById(R.id.color);
         //get the selected item
         String beerType = String.valueOf(color.getSelectedItem());
-        //display the selected Item
-        brands.setText(beerType);
-
+        //Get Recommendations from the BeerExpert Class
+        List<String> brandsList=expert.getBrands(beerType);//get a list of brand
+        StringBuilder brandsFormatted=new StringBuilder();//build a string from the values of the list
+        for(String brand:brandsList){
+            brandsFormatted.append(brand).append("\n");//display each brand in a new line
+        }
+        //displays the beer
+        brands.setText(brandsFormatted);
 
     }
 }

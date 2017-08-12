@@ -11,33 +11,37 @@
         android:id="@+id/color"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/brands"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="17dp"
+        android:layout_marginTop="11dp"
         android:entries="@array/beer_colors"
-        android:theme="@android:style/ThemeOverlay.Material.Dark"></Spinner>
+        android:theme="@android:style/ThemeOverlay.Material.Dark"
+        android:layout_below="@+id/brands"
+        android:layout_alignLeft="@+id/brands"
+        android:layout_alignStart="@+id/brands"></Spinner>
 
     <Button
         android:id="@+id/find_beer"
         android:onClick="onClickFindBeer"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="149dp"
-        android:text="@string/Find_Beer" />
+        android:text="@string/Find_Beer"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="12dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginBottom="24dp" />
 
     <TextView
         android:id="@+id/brands"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/find_beer"
-        android:layout_alignParentTop="true"
-        android:layout_alignStart="@+id/find_beer"
-        android:layout_marginTop="58dp"
+        android:layout_marginTop="14dp"
         android:text="@string/brands"
         android:textAlignment="viewStart"
         android:textColor="#ffff"
         android:textSize="24sp"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        android:layout_alignParentTop="true"
+        android:layout_alignLeft="@+id/find_beer"
+        android:layout_alignStart="@+id/find_beer" />
 </RelativeLayout>
